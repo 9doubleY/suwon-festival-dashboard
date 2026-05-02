@@ -1,0 +1,326 @@
+/* ===========================================================================
+   수원화성문화제 통합 대시보드 — 뉴모피즘 디자인
+   =========================================================================== */
+
+/* 전체 배경 */
+.stApp {
+    background: #E0E5EC;
+    color: #2D3748;
+}
+
+/* 메인 컨테이너 */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1400px;
+}
+
+/* 사이드바 뉴모피즘 */
+section[data-testid="stSidebar"] {
+    background: #E0E5EC !important;
+    box-shadow: inset 4px 4px 12px #BABECC, inset -4px -4px 12px #FFFFFF;
+}
+
+section[data-testid="stSidebar"] > div {
+    background: #E0E5EC !important;
+}
+
+/* 사이드바 텍스트 */
+section[data-testid="stSidebar"] * {
+    color: #2D3748 !important;
+}
+
+/* 헤더 영역 */
+.neuro-header {
+    background: #E0E5EC;
+    border-radius: 24px;
+    padding: 32px 40px;
+    margin-bottom: 32px;
+    box-shadow: 8px 8px 20px #BABECC, -8px -8px 20px #FFFFFF;
+    text-align: center;
+}
+
+.neuro-header h1 {
+    color: #1F3864;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.neuro-header p {
+    color: #4A5568;
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* 카드 (KPI, 차트 컨테이너) */
+.neuro-card {
+    background: #E0E5EC;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 8px 8px 16px #BABECC, -8px -8px 16px #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.neuro-card:hover {
+    box-shadow: 6px 6px 12px #BABECC, -6px -6px 12px #FFFFFF;
+}
+
+/* 인셋 카드 (눌린 효과) */
+.neuro-inset {
+    background: #E0E5EC;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: inset 6px 6px 12px #BABECC, inset -6px -6px 12px #FFFFFF;
+}
+
+/* KPI 카드 */
+.kpi-card {
+    background: #E0E5EC;
+    border-radius: 20px;
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 6px 6px 14px #BABECC, -6px -6px 14px #FFFFFF;
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+}
+
+.kpi-label {
+    color: #4A5568;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kpi-value {
+    color: #1F3864;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.kpi-delta {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.kpi-delta.up {
+    color: #2F855A;
+}
+
+.kpi-delta.down {
+    color: #C53030;
+}
+
+.kpi-delta.neutral {
+    color: #718096;
+}
+
+/* 섹션 제목 */
+.section-title {
+    color: #1F3864;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 24px 0 16px 0;
+    padding-left: 16px;
+    border-left: 5px solid #1F3864;
+}
+
+.section-subtitle {
+    color: #4A5568;
+    font-size: 1rem;
+    margin: -8px 0 20px 16px;
+    opacity: 0.85;
+}
+
+/* 인사이트 박스 */
+.insight-box {
+    background: #E0E5EC;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    box-shadow: inset 4px 4px 8px #BABECC, inset -4px -4px 8px #FFFFFF;
+    border-left: 4px solid #1F3864;
+}
+
+.insight-box.warning {
+    border-left-color: #DD6B20;
+}
+
+.insight-box.success {
+    border-left-color: #2F855A;
+}
+
+.insight-box.danger {
+    border-left-color: #C53030;
+}
+
+.insight-box h4 {
+    color: #1F3864;
+    margin: 0 0 8px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.insight-box p {
+    color: #2D3748;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 인용 박스 */
+.quote-box {
+    background: #E0E5EC;
+    border-radius: 16px;
+    padding: 16px 24px;
+    margin: 12px 0;
+    box-shadow: inset 3px 3px 6px #BABECC, inset -3px -3px 6px #FFFFFF;
+    font-style: italic;
+    color: #4A5568;
+    line-height: 1.7;
+    border-left: 3px solid #1F3864;
+}
+
+.quote-box.negative {
+    border-left-color: #C53030;
+}
+
+.quote-box .source {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #718096;
+    font-style: normal;
+}
+
+/* Streamlit 기본 요소 오버라이드 */
+
+/* 라디오 버튼 */
+.stRadio > div {
+    background: transparent !important;
+    gap: 8px;
+}
+
+.stRadio label {
+    background: #E0E5EC;
+    padding: 10px 16px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px #BABECC, -4px -4px 8px #FFFFFF;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.stRadio label:hover {
+    box-shadow: inset 3px 3px 6px #BABECC, inset -3px -3px 6px #FFFFFF;
+}
+
+/* 셀렉트박스 */
+.stSelectbox > div > div {
+    background: #E0E5EC !important;
+    border-radius: 12px !important;
+    box-shadow: inset 3px 3px 6px #BABECC, inset -3px -3px 6px #FFFFFF !important;
+    border: none !important;
+}
+
+/* 데이터프레임 / 테이블 */
+.stDataFrame {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 6px 6px 12px #BABECC, -6px -6px 12px #FFFFFF;
+}
+
+[data-testid="stDataFrameResizable"] {
+    background: #E0E5EC !important;
+}
+
+/* 메트릭 (사용 안 하지만 안전을 위해) */
+[data-testid="stMetric"] {
+    background: #E0E5EC;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 6px 6px 12px #BABECC, -6px -6px 12px #FFFFFF;
+}
+
+/* 탭 */
+.stTabs [data-baseweb="tab-list"] {
+    background: transparent;
+    gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: #E0E5EC !important;
+    border-radius: 12px !important;
+    padding: 12px 20px !important;
+    box-shadow: 4px 4px 8px #BABECC, -4px -4px 8px #FFFFFF;
+    border: none !important;
+    color: #4A5568 !important;
+    font-weight: 600;
+}
+
+.stTabs [aria-selected="true"] {
+    box-shadow: inset 3px 3px 6px #BABECC, inset -3px -3px 6px #FFFFFF !important;
+    color: #1F3864 !important;
+}
+
+/* 익스팬더 */
+.streamlit-expanderHeader {
+    background: #E0E5EC !important;
+    border-radius: 12px !important;
+    box-shadow: 4px 4px 8px #BABECC, -4px -4px 8px #FFFFFF !important;
+    border: none !important;
+}
+
+/* 헤더 색상 강제 */
+h1, h2, h3 {
+    color: #1F3864 !important;
+}
+
+/* 마크다운 텍스트 */
+.stMarkdown p {
+    color: #2D3748;
+    line-height: 1.7;
+}
+
+/* 푸터 숨기기 */
+footer {visibility: hidden;}
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Plotly 차트 컨테이너 */
+.js-plotly-plot {
+    background: #E0E5EC !important;
+}
+
+.plot-container {
+    background: #E0E5EC !important;
+    border-radius: 16px;
+}
+
+/* 배지 */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: 6px;
+    box-shadow: 3px 3px 6px #BABECC, -3px -3px 6px #FFFFFF;
+}
+
+.badge-s { background: #E0E5EC; color: #1A365D; }
+.badge-a { background: #E0E5EC; color: #2F855A; }
+.badge-b { background: #E0E5EC; color: #B7791F; }
+.badge-c { background: #E0E5EC; color: #C53030; }

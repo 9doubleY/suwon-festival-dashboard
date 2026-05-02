@@ -281,8 +281,9 @@ def route(page, marts, st, kpi_card, section_title, insight_box, quote_box, styl
             section_title("업종별 지출 비율 변화")
             biz = marts['mart_2-3a_대분류별비율'].copy()
             if '연도' in biz.columns and '대분류' in biz.columns:
-                biz_pivot = biz.pivot_table(index='연도', columns='대분류', 
-                    values=biz.columns[2], aggfunc='sum').fillna(0)
+                biz['연도'] = biz['연도'].astype(str)
+                biz_pivot = biz.pivot_table(index='연도', columns='대분류',
+                    values='대분류_지출비율', aggfunc='sum').fillna(0)
                 fig = go.Figure()
                 colors = [PRIMARY, ACCENT, SUCCESS, WARNING, DANGER, "#9F7AEA", "#38B2AC"]
                 for i, col in enumerate(biz_pivot.columns):
